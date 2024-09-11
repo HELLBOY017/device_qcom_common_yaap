@@ -34,6 +34,15 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := false
 # Flags for <5.10 targets
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 TARGET_LOOP_COMPRESS_READ := true
+else
+SOONG_CONFIG_NAMESPACES += android_hardware_audio
+SOONG_CONFIG_android_hardware_audio += \
+    run_64bit
+SOONG_CONFIG_android_hardware_audio_run_64bit := true
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
+    android.hardware.audio.service_64_override
 endif
 
 # OMX Packages
