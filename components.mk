@@ -130,7 +130,7 @@ ifneq (,$(filter overlay, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
-  include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
+  #include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
   include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
 endif
 
