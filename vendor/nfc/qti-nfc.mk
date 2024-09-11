@@ -40,6 +40,7 @@ $(call inherit-product, hardware/st/nfc/nfc_vendor_product.mk)
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     libchrome.vendor \
+    libevent.vendor \
     NfcNci \
     SecureElement \
     Tag
@@ -54,6 +55,7 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
     android.hardware.nfc@1.2.vendor \
     android.hardware.secure_element@1.2-service \
-    libchrome.vendor
+    libchrome.vendor \
+    libevent.vendor
 
 endif
